@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  padding-bottom: 16px;
+}
+
+.default-title {
+  text-decoration: underline;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #a0f,
+    0 0 82px #a0f,
+    0 0 92px #a0f,
+    0 0 102px #a0f,
+    0 0 151px #a0f;
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #a0f,
+      0 0 80px #a0f,
+      0 0 90px #a0f,
+      0 0 100px #a0f,
+      0 0 150px #a0f;
+  }
+
+  0% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 10px #fff,
+      0 0 18px #fff,
+      0 0 38px #a0f,
+      0 0 73px #a0f,
+      0 0 80px #a0f,
+      0 0 94px #a0f,
+      0 0 140px #a0f;
+  }
+}

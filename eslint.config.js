@@ -1,7 +1,7 @@
 // @ts-check
 const eslint = require('@eslint/js');
-const html = require("@html-eslint/eslint-plugin");
-const {defineConfig} = require('@eslint/config-helpers');
+// const {defineConfig} = require('@eslint/config-helpers');
+const { defineConfig } = require("eslint/config");
 const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
 const eslintConfigPrettier = require('eslint-config-prettier');

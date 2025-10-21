@@ -1,0 +1,25 @@
+<aor-section-title [title]="title()" />
+@if (example()) {
+  <pre class="example">
+    <code>
+      <ng-container *ngTemplateOutlet="example()" />
+    </code>
+  </pre>
+}
+<section class="content">
+  <aor-section-container title="ng-content with default content">
+    <ng-content>
+      <aor-no-content-msg message="No basic content" />
+    </ng-content>
+  </aor-section-container>
+  <aor-section-container title="ng-content with select attribute">
+    <ng-content select="[attribute]">
+      <aor-no-content-msg message="No content with attribute" />
+    </ng-content>
+  </aor-section-container>
+  <aor-section-container title="ng-content with select tag">
+    <ng-content select="aor-projected-content">
+      <aor-no-content-msg message="No content with tag aor-projected-content" />
+    </ng-content>
+  </aor-section-container>
+</section>

@@ -1,0 +1,21 @@
+<aor-page-title title="Single Slot Content projection" />
+<section class="content">
+  <aor-container title="Projecting:" [example]="example1">
+    <p>Projected content</p>
+  </aor-container>
+  <aor-container title="Projecting:" [example]="example2">
+    <p attribute>Projected content with attribute</p>
+  </aor-container>
+  <aor-container title="Projecting:" [example]="example3">
+    <aor-projected-content />
+  </aor-container>
+  <aor-container title="Projecting:" [example]="example4">
+    <p ngProjectAs="aor-projected-content">Projected content with tag</p>
+  </aor-container>
+</section>
+
+<!-- CONTENT PROJECTION THROUGH INPUT-->
+<ng-template #example1> &lt;p&gt;Projected content&lt;/p&gt; </ng-template>
+<ng-template #example2> &lt;p attribute&gt;Projected content with attribute&lt;/p&gt; </ng-template>
+<ng-template #example3> &lt;aor-projected-content /&gt; </ng-template>
+<ng-template #example4> &lt;p ngProjectAs="aor-projected-content"&gt;Projected content with tag&lt;/p&gt; </ng-template>

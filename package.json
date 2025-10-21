@@ -27,7 +27,6 @@
     "@angular/cli": "^20.3.6",
     "@angular/compiler-cli": "^20.3.0",
     "@eslint/config-helpers": "^0.4.0",
-    "@html-eslint/eslint-plugin": "^0.47.0",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "20.4.0",
     "eslint": "^9.37.0",

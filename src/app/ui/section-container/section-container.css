@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  border: 2px solid #0000ff;
+  padding: 8px;
+}
+
+.title {
+  color: white;
+}
+
+.content {
+  color: #298d29;
+}
