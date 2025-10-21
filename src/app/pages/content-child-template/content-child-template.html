@@ -1,0 +1,74 @@
+<aor-page-title title="Content Child Template" />
+
+<section class="content">
+  <section class="example">
+    <aor-section-title title="Card with built-in title " />
+    <aor-card title="Built-in Card Title">
+      <p>This is the content of the card.</p>
+    </aor-card>
+  </section>
+
+  <section class="example">
+    <aor-section-title title="Card with both, built-in and template title, shows built-in title (card logic)" />
+    <aor-card title="Built-in Card Title">
+      <ng-template #title>
+        <span>Custom Card Title</span>
+      </ng-template>
+
+      <p>This is the content of the card.</p>
+    </aor-card>
+  </section>
+
+  <section class="example">
+    <aor-section-title title="Card with custom title and footer using ng-template" />
+    <aor-card>
+      <ng-template #title>
+        <span>Custom Card Title</span>
+      </ng-template>
+
+      <p>This is the content of the card.</p>
+
+      <ng-template #footer>
+        <span>Custom Card Footer</span>
+      </ng-template>
+    </aor-card>
+  </section>
+
+  <section class="example">
+    <aor-section-title title="Card with only content" />
+    <aor-card>
+      <p>This is the content of the card.</p>
+    </aor-card>
+  </section>
+
+  <section class="example">
+    <aor-section-title title="Card with content and footer" />
+    <aor-card>
+      <p>This is the content of the card.</p>
+      <ng-template #footer>
+        <span>Custom Card Footer</span>
+      </ng-template>
+    </aor-card>
+  </section>
+
+  <section class="example">
+    <aor-section-title title="Card with custom title using ng-template by input" />
+    <aor-card [titleTemplate]="titleTemplate">
+      <p>This is the content of the card.</p>
+    </aor-card>
+    <ng-template #titleTemplate>
+      <span>Custom Card Title Template</span>
+    </ng-template>
+  </section>
+
+  <section class="example">
+    <aor-section-title title="Card with custom title and footer using structural directives" />
+    <aor-card>
+      <span *aorCardTitle>Custom Card Title Template By Directive</span>
+
+      <p>This is the content of the card.</p>
+
+      <span *aorCardFooter>Custom Card Footer By Directive</span>
+    </aor-card>
+  </section>
+</section>

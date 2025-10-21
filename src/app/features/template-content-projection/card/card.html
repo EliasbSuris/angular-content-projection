@@ -1,0 +1,29 @@
+@if (hasTitle()) {
+  <section class="card-section card-header">
+    @if (title()) {
+      <h4 class="card-title">
+        {{ title() }}
+      </h4>
+    } @else if (titleContent()) {
+      <ng-container *ngTemplateOutlet="titleContent()" />
+    } @else if (titleTemplate()) {
+      <ng-container *ngTemplateOutlet="titleTemplate()" />
+    } @else if (titleDirective()) {
+      <ng-container *ngTemplateOutlet="titleDirective()" />
+    }
+  </section>
+}
+
+<section class="card-section card-body">
+  <ng-content />
+</section>
+
+@if (hasFooter()) {
+  <section class="card-section card-footer">
+    @if (footerContent()) {
+      <ng-container *ngTemplateOutlet="footerContent()" />
+    } @else if (footerDirective()) {
+      <ng-container *ngTemplateOutlet="footerDirective()" />
+    }
+  </section>
+}

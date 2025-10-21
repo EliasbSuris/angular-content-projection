@@ -1,0 +1,12 @@
+<h4>{{ title() }}</h4>
+<ul>
+  <ng-content select="aor-list-item" />
+</ul>
+<h4>{{ titleDef() }}</h4>
+<ul>
+  @for (itemDef of itemsDef(); track $index) {
+    <li>
+      <ng-container *ngTemplateOutlet="itemDef" />
+    </li>
+  }
+</ul>

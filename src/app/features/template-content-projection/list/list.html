@@ -1,0 +1,20 @@
+<h4>{{ title() }}</h4>
+<ul>
+  @for (item of items(); track item.id) {
+    <li>
+      @if (itemTemplate()) {
+        <ng-container *ngTemplateOutlet="itemTemplate(); context: { $implicit: item, index: $index }" />
+      } @else {
+        {{ item.title }} - {{ item.description }}
+      }
+    </li>
+  } @empty {
+    <li>
+      @if (emptyTemplate()) {
+        <ng-container *ngTemplateOutlet="emptyTemplate()" />
+      } @else {
+        No items available.
+      }
+    </li>
+  }
+</ul>

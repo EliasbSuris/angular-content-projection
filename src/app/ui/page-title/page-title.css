@@ -5,7 +5,7 @@
 
 .default-title {
   text-decoration: underline;
-  animation: pulsate 0.11s ease-in-out infinite alternate;
+  animation: pulsate 1s ease-in-out infinite alternate;
   color: #fff;
   text-shadow:
     0 0 7px #fff,

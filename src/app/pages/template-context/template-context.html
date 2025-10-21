@@ -1,0 +1,28 @@
+<aor-page-title title="Template Context" />
+
+<aor-list title="Default List" [items]="items()" />
+
+<aor-list title="Custom List Item" [items]="items()">
+  <ng-template #item let-item let-i="index">
+    <strong [style.color]="'green'">{{ item.title }}</strong> =>
+    <span [style.color]="'yellow'">{{ item.description }}</span> (at index {{ i }})
+  </ng-template>
+</aor-list>
+
+<aor-explicit-list title="This is a list with explicit elements">
+  @for (item of items(); track $index) {
+    <aor-list-item>
+      <strong [style.color]="'blue'">{{ item.title }}</strong> ::
+      <span [style.color]="'red'">{{ item.description }}</span>
+    </aor-list-item>
+  }
+</aor-explicit-list>
+
+<aor-explicit-list title="This is a list with explicit elements using a def directive">
+  @for (item of items(); track $index) {
+    <section *aorDefListItem>
+      <strong [style.color]="'red'">{{ item.title }}</strong> ::
+      <span [style.color]="'blue'">{{ item.description }}</span>
+    </section>
+  }
+</aor-explicit-list>

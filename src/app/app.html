@@ -13,13 +13,25 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="ng-content" nzIcon="dashboard">
+      <li nz-submenu nzOpen nzTitle="ng-content" nzIcon="container">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a [routerLink]="[APP_ROUTES.SINGLE_SLOT]">Single Slot</a>
           </li>
           <li nz-menu-item nzMatchRouter>
             <a [routerLink]="[APP_ROUTES.MULTI_SLOT]">Multi Slot</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="Template projection" nzIcon="solution">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="[APP_ROUTES.CONTENT_CHILD_TEMPLATE]">Content child ng-template</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="[APP_ROUTES.TEMPLATE_CONTEXT]">Template context</a>
           </li>
         </ul>
       </li>

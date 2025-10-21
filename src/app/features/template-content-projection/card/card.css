@@ -1,0 +1,28 @@
+:host {
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.card-section {
+  padding: 16px;
+}
+
+.card-header {
+  border-bottom: 1px solid #e8e8e8;
+
+  .card-title {
+    color: gold;
+    font-weight: bold;
+  }
+}
+
+.card-body {
+  color: blueviolet;
+  min-height: 50px;
+}
+
+.card-footer {
+  border-top: 1px solid #e8e8e8;
+}
