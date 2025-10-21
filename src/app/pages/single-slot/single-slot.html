@@ -15,7 +15,13 @@
 </section>
 
 <!-- CONTENT PROJECTION THROUGH INPUT-->
-<ng-template #example1> &lt;p&gt;Projected content&lt;/p&gt; </ng-template>
-<ng-template #example2> &lt;p attribute&gt;Projected content with attribute&lt;/p&gt; </ng-template>
-<ng-template #example3> &lt;aor-projected-content /&gt; </ng-template>
-<ng-template #example4> &lt;p ngProjectAs="aor-projected-content"&gt;Projected content with tag&lt;/p&gt; </ng-template>
+<ng-template #example1> <span [style.color]="'white'">&lt;p&gt;Projected content&lt;/p&gt; </span></ng-template>
+<ng-template #example2>
+  <span [style.color]="'white'">&lt;p attribute&gt;Projected content with attribute&lt;/p&gt; </span></ng-template
+>
+<ng-template #example3> <span [style.color]="'white'">&lt;aor-projected-content /&gt; </span></ng-template>
+<ng-template #example4>
+  <span [style.color]="'white'"
+    >&lt;p ngProjectAs="aor-projected-content"&gt;Projected content with tag&lt;/p&gt;
+  </span>
+</ng-template>

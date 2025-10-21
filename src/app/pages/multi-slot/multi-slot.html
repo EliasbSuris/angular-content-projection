@@ -1,1 +1,46 @@
-<p>multi-slot works!</p>
+<aor-page-title title="Multi Slot Content projection" />
+<section class="content">
+  <aor-container title="Projecting on all slots:" [example]="example1">
+    <p>Projected content</p>
+    <p attribute>Projected content with attribute</p>
+    <aor-projected-content />
+  </aor-container>
+  <aor-container title="Projecting n elements on the same slot:" [example]="example2">
+    <p>Projected content 1</p>
+    <p>Projected content 2</p>
+    <p>Projected content 3</p>
+  </aor-container>
+  <aor-container title="ng-content default content limitations 1:" [example]="example3">
+    @if (false) {
+      <aor-projected-content />
+    }
+  </aor-container>
+  <aor-container title="ng-content default content limitations 2:" [example]="example4">
+    <ng-template>
+      <aor-projected-content />
+    </ng-template>
+  </aor-container>
+</section>
+
+<!-- CONTENT PROJECTION THROUGH INPUT-->
+<ng-template #example1>
+  <span [style.color]="'white'">&lt;p&gt;Projected content&lt;/p&gt;</span> => SHOULD BE PROJECTED ON SLOT 1 <br />
+  <span [style.color]="'white'">&lt;p attribute&gt;Projected content with attribute&lt;/p&gt;</span> => SHOULD BE
+  PROJECTED ON SLOT 2 <br />
+  <span [style.color]="'white'">&lt;aor-projected-content /&gt;</span> => SHOULD BE PROJECTED ON SLOT 3 <br />
+</ng-template>
+<ng-template #example2>
+  <span [style.color]="'white'">&lt;p&gt;Projected content 1&lt;/p&gt;</span> => SHOULD BE PROJECTED ON SLOT 1 <br />
+  <span [style.color]="'white'">&lt;p&gt;Projected content 2&lt;/p&gt;</span> => SHOULD BE PROJECTED ON SLOT 1 <br />
+  <span [style.color]="'white'">&lt;p&gt;Projected content 3&lt;/p&gt;</span> => SHOULD BE PROJECTED ON SLOT 1 <br />
+</ng-template>
+<ng-template #example3>
+  <span [style.color]="'white'">
+    {{ '@if (false) {' }}
+    &lt;aor-projected-content /&gt;
+    {{ '}' }}
+  </span>
+</ng-template>
+<ng-template #example4>
+  <span [style.color]="'white'"> &lt;ng-template&gt; &lt;aor-projected-content /&gt; &lt;/ng-template&gt; </span>
+</ng-template>
