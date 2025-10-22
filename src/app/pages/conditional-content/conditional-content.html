@@ -1,0 +1,15 @@
+<aor-page-title title="Conditional Content" />
+
+<aor-accordion title="Content Projection with ng-content">
+  <p>Using ng-content for conditional content projection</p>
+</aor-accordion>
+
+<aor-accordion title="Content Projection using ng-content">
+  <aor-projected-content name="NG-CONTENT" />
+</aor-accordion>
+
+<aor-accordion title="Content Projection using ng-template and ngTemplateOutlet">
+  <ng-template #content>
+    <aor-projected-content name="NG-TEMPLATE" />
+  </ng-template>
+</aor-accordion>

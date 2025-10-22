@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 16px;
+}
+
+.accordion-content {
+  overflow: hidden;
+
+  &.expanded {
+    padding: 16px;
+  }
+
+  &.collapsed {
+    padding: 0;
+  }
+}

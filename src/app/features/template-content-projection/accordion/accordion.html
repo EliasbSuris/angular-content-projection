@@ -1,0 +1,17 @@
+<section class="accordion-header">
+  <h4>{{ title() }}</h4>
+  <button nz-button (click)="toggleContent()">
+    {{ isOpen() ? 'Collapse' : 'Expand' }}
+    @if (isOpen()) {
+      <i nz-icon nzType="down"></i>
+    } @else {
+      <i nz-icon nzType="up"></i>
+    }
+  </button>
+</section>
+<section class="accordion-content" [class.collapsed]="!isOpen()" [class.expanded]="isOpen()">
+  @if (isOpen()) {
+    <ng-content />
+    <ng-container *ngTemplateOutlet="contentTemplate()" />
+  }
+</section>

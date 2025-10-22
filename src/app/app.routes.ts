@@ -5,6 +5,7 @@ export const APP_ROUTES = {
   MULTI_SLOT: 'multi-slot',
   CONTENT_CHILD_TEMPLATE: 'content-child-template',
   TEMPLATE_CONTEXT: 'template-context',
+  CONDITIONAL_CONTENT: 'conditional-content',
   DEFAULT: 'single-slot'
 };
 
@@ -26,5 +27,9 @@ export const routes: Routes = [
   {
     path: APP_ROUTES.TEMPLATE_CONTEXT,
     loadComponent: () => import('./pages/template-context/template-context').then(m => m.TemplateContext)
+  },
+  {
+    path: APP_ROUTES.CONDITIONAL_CONTENT,
+    loadComponent: () => import('./pages/conditional-content/conditional-content').then(m => m.ConditionalContent)
   }
 ];
