@@ -2,3 +2,8 @@
   text-decoration: underline;
   color: #ea00d9;
 }
+
+.default-description {
+  margin-top: 4px;
+  color: cyan;
+}

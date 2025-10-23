@@ -9,4 +9,5 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 })
 export class SectionTitle {
   readonly title = input('');
+  readonly description = input('');
 }

@@ -15,7 +15,19 @@
 }
 
 <section class="card-section card-body">
-  <ng-content />
+  @if (isCompact()) {
+    <div class="compact-body">
+      <div class="template">
+        <ng-container *ngTemplateOutlet="bodyContent()" />
+      </div>
+      <ng-content />
+    </div>
+  } @else {
+    <div class="template">
+      <ng-container *ngTemplateOutlet="bodyContent()" />
+    </div>
+    <ng-content />
+  }
 </section>
 
 @if (hasFooter()) {

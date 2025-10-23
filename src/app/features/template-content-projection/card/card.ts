@@ -11,6 +11,9 @@ import { CardFooter } from './card-footer';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Card {
+  readonly isCompact = input(false);
+  readonly bodyContent = contentChild('body', { read: TemplateRef });
+
   readonly titleContent = contentChild('title', { read: TemplateRef });
   readonly titleDirective = contentChild(CardTitle, { read: TemplateRef });
   readonly titleTemplate = input<TemplateRef<unknown>>();
@@ -18,6 +21,7 @@ export class Card {
   protected readonly hasTitle = computed(
     () => !!this.title() || !!this.titleTemplate() || !!this.titleDirective() || !!this.titleContent()
   );
+
   readonly footerContent = contentChild('footer', { read: TemplateRef });
   readonly footerDirective = contentChild(CardFooter, { read: TemplateRef });
   protected readonly hasFooter = computed(() => !!this.footerDirective() || !!this.footerContent());

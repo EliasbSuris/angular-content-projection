@@ -1,15 +1,49 @@
 <aor-page-title title="Conditional Content" />
 
-<aor-accordion title="Content Projection with ng-content">
-  <p>Using ng-content for conditional content projection</p>
-</aor-accordion>
+<section>
+  <aor-section-title
+    title="Conditional content projection using ng-content can be tricky."
+    description="Projecting a HTML tag seems to work fine." />
+  <aor-accordion title="Content Projection with ng-content">
+    <p>Using ng-content for conditional content projection</p>
+  </aor-accordion>
+</section>
 
-<aor-accordion title="Content Projection using ng-content">
-  <aor-projected-content name="NG-CONTENT" />
-</aor-accordion>
+<section>
+  <aor-section-title
+    description="But projecting a component..things starts becoming tricky, at first glance all it's fine or...uh...maybe not?" />
+  <aor-accordion title="Content Projection using ng-content">
+    <aor-projected-content name="NG-CONTENT" />
+  </aor-accordion>
+</section>
 
-<aor-accordion title="Content Projection using ng-template and ngTemplateOutlet">
-  <ng-template #content>
-    <aor-projected-content name="NG-TEMPLATE" />
-  </ng-template>
-</aor-accordion>
+<section>
+  <aor-section-title title="Ng-template to the rescue!" description="Ng-template it's a bit weird, but it works!." />
+  <aor-accordion title="Content Projection using ng-template and ngTemplateOutlet">
+    <ng-template #content>
+      <aor-projected-content name="NG-TEMPLATE" />
+    </ng-template>
+  </aor-accordion>
+</section>
+
+<section>
+  <aor-section-title
+    title="Duplicated ng-content tag algo doesn't work as expected"
+    description="This card has two modes, compact or normal, normal one works fine" />
+  <aor-card>
+    <ng-template #title> Not a compact card </ng-template>
+    <ng-template #body> <p>I'm a ng-template!</p> </ng-template>
+    <p>ng-content here! not compact please!</p>
+  </aor-card>
+</section>
+
+<section>
+  <aor-section-title
+    description="But compact mode it's not working as expected because of the duplicated ng-content tag." />
+  <aor-card [isCompact]="true">
+    <ng-template #title> Danger! compact card </ng-template>
+
+    <ng-template #body> <p>I'm a ng-template, ng-content has no power here!</p> </ng-template>
+    <p>Nooo, help I'm here!</p>
+  </aor-card>
+</section>

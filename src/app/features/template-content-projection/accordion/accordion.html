@@ -12,6 +12,8 @@
 <section class="accordion-content" [class.collapsed]="!isOpen()" [class.expanded]="isOpen()">
   @if (isOpen()) {
     <ng-content />
-    <ng-container *ngTemplateOutlet="contentTemplate()" />
+    <div class="template">
+      <ng-container *ngTemplateOutlet="contentTemplate()" />
+    </div>
   }
 </section>
