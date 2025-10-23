@@ -8,5 +8,5 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SectionTitle {
-  title = input('');
+  readonly title = input('');
 }

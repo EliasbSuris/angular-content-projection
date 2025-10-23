@@ -11,14 +11,14 @@ import { CardFooter } from './card-footer';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Card {
-  titleContent = contentChild('title', { read: TemplateRef });
-  titleDirective = contentChild(CardTitle, { read: TemplateRef });
-  titleTemplate = input<TemplateRef<unknown>>();
-  title = input<string>();
-  protected hasTitle = computed(
+  readonly titleContent = contentChild('title', { read: TemplateRef });
+  readonly titleDirective = contentChild(CardTitle, { read: TemplateRef });
+  readonly titleTemplate = input<TemplateRef<unknown>>();
+  readonly title = input<string>();
+  protected readonly hasTitle = computed(
     () => !!this.title() || !!this.titleTemplate() || !!this.titleDirective() || !!this.titleContent()
   );
-  footerContent = contentChild('footer', { read: TemplateRef });
-  footerDirective = contentChild(CardFooter, { read: TemplateRef });
-  protected hasFooter = computed(() => !!this.footerDirective() || !!this.footerContent());
+  readonly footerContent = contentChild('footer', { read: TemplateRef });
+  readonly footerDirective = contentChild(CardFooter, { read: TemplateRef });
+  protected readonly hasFooter = computed(() => !!this.footerDirective() || !!this.footerContent());
 }

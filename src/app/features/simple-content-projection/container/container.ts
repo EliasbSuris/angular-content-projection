@@ -12,6 +12,6 @@ import { SectionTitle } from '@ui/section-title/section-title';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Container {
-  title = input('Default Container Title');
-  example = input<TemplateRef<unknown>>();
+  readonly title = input('Default Container Title');
+  readonly example = input<TemplateRef<unknown>>();
 }

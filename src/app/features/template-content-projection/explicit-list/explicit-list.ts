@@ -10,7 +10,7 @@ import { DefListItem } from './def-list-item';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExplicitList {
-  title = input('');
-  titleDef = input('');
-  itemsDef = contentChildren(DefListItem, { read: TemplateRef });
+  readonly title = input('');
+  readonly titleDef = input('');
+  readonly itemsDef = contentChildren(DefListItem, { read: TemplateRef });
 }

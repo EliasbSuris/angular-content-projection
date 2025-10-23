@@ -15,9 +15,9 @@ export interface Item {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class List {
-  title = input('');
-  items = input.required<Item[]>();
+  readonly title = input('');
+  readonly items = input.required<Item[]>();
 
-  itemTemplate = contentChild('item', { read: TemplateRef });
-  emptyTemplate = contentChild('empty', { read: TemplateRef });
+  readonly itemTemplate = contentChild('item', { read: TemplateRef });
+  readonly emptyTemplate = contentChild('empty', { read: TemplateRef });
 }

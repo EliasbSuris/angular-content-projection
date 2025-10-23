@@ -8,5 +8,5 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NoContentMsg {
-  message = input('No Content Available!');
+  readonly message = input('No Content Available!');
 }
