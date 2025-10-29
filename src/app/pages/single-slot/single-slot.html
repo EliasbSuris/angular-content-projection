@@ -1,14 +1,21 @@
 <aor-page-title title="Single Slot Content projection" />
 <section class="content">
+  <!--? Projecting a simple paragraph without any attribute -->
   <aor-container title="Projecting:" [example]="example1">
     <p>Projected content</p>
   </aor-container>
+
+  <!--? Projecting a paragraph with an attribute -->
   <aor-container title="Projecting:" [example]="example2">
     <p attribute>Projected content with attribute</p>
   </aor-container>
+
+  <!--? Projecting a component -->
   <aor-container title="Projecting:" [example]="example3">
     <aor-projected-content />
   </aor-container>
+
+  <!--? Projecting a paragraph with ngProjectAs to match a tag selector -->
   <aor-container title="Projecting:" [example]="example4">
     <p ngProjectAs="aor-projected-content">Projected content with tag</p>
   </aor-container>
